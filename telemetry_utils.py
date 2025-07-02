@@ -4,7 +4,7 @@ from fastf1 import plotting
 import pandas as pd
 
 def get_session_data(year, gp, session_type):
-    fastf1.Cache.enable_cache('C:/Users/Lenovo/Desktop/F1-Telemetry-Dashboard/data')  # enable cache for faster access
+    fastf1.Cache.enable_cache('./data')  # enable cache for faster access
     session = fastf1.get_session(year, gp, session_type)
     session.load()
     return session
