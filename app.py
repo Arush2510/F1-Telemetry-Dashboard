@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 
 # Enable caching
-fastf1.Cache.enable_cache('C:/Users/Lenovo/Desktop/F1-Telemetry-Dashboard/data')
+fastf1.Cache.enable_cache('./data')
 
 st.set_page_config(layout="wide")
 
@@ -24,7 +24,7 @@ with st.container():
     cols = st.columns(len(driver_images) + 1)
     for i, code in enumerate(driver_images):
         with cols[i]:
-            st.image(f"C:/Users/Lenovo/Desktop/F1-Telemetry-Dashboard/assets/{code}.jpeg", width=40, caption=code)
+            st.image(f"{code}.jpeg", width=40, caption=code)
 
     with cols[-1]:
         st.markdown("<h4 style='color:white; margin-top:20px;'></h4>", unsafe_allow_html=True)
